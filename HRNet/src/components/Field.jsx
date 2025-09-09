@@ -14,7 +14,6 @@ function Field({
     disabled,
     onChange,
     value,
-    options,
 }) {
     let component;
     switch (type) {
@@ -52,23 +51,6 @@ function Field({
                     name={name}
                     required={required}
                 />
-            );
-            break;
-        case FIELD_TYPES.SELECT:
-            component = (
-                <select
-                    name={name}
-                    id={id}
-                    required={required}
-                    disabled={disabled}
-                    value={value || ''}
-                    onChange={onChange}
-                >
-                    {placeholder && <option value="">{placeholder}</option>}
-                    {options.map((option) => (
-                        <option key={option.abbreviation} value={option.name}>{option.name}</option>
-                    ))}
-                </select>
             );
             break;
         case FIELD_TYPES.ZIP_CODE:
