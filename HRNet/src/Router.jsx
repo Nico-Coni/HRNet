@@ -1,5 +1,4 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-// import { PageError } from '../commun/PageError.jsx'
 import { Index } from './pages/Index.jsx'
 import { EmployeeList } from './pages/EmployeeList.jsx'
 import React from 'react'
@@ -7,7 +6,6 @@ import React from 'react'
 const router = createBrowserRouter([
     {
         path: '/',
-        // errorElement: <PageError />,
         children: [
             {
                 index: true,

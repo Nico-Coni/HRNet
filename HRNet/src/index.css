@@ -40,6 +40,8 @@ main {
 .input select {
   background-color: white;
   color: #242424;
+  border: none;
+  padding: 5px;
 }
 
 .input input::placeholder {
@@ -164,6 +166,15 @@ legend {
   color: white;
 }
 
+@media screen and (max-width: 1210px) {
+  .p-datatable .p-datatable-tbody>tr>td {
+    padding: 10px;
+  }
+
+  .p-datatable .p-datatable-thead>tr>th {
+    padding: 10px;
+  }
+}
 
 @media (prefers-color-scheme: light) {
   :root {

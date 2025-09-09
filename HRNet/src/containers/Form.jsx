@@ -7,6 +7,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { CustomModal } from '../components/Modal.jsx'
 import { employees } from '../data/data.js'
 import { useLocalStorageState } from '../hooks/hooks.js'
+import { Dropdown } from 'plugin_dropdown_for_hrnet'
 
 export function Form() {
 
@@ -22,9 +23,10 @@ export function Form() {
         department: '',
         abbreviation: ''
     }
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isCreatedModalOpen, setIsCreatedModalOpen] = useState(false);
     const [formData, setFormData] = useState(initialFormData)
     const [employeesList, setEmployeesList] = useLocalStorageState('employees', employees);
+    const listStates = states.map(state => state.name)
 
     const handleChangeForm = (event) => {
         let abb = formData.abbreviation
@@ -42,9 +44,7 @@ export function Form() {
         event.preventDefault();
         const updatedEmployees = [...employeesList, formData];
         setEmployeesList(updatedEmployees);
-        console.log(formData);
-        console.log(employeesList);
-        setIsModalOpen(true);
+        setIsCreatedModalOpen(true);
         setFormData(initialFormData);
     }
 
@@ -121,7 +121,7 @@ export function Form() {
                         value={formData.city}
                         className="input"
                     />
-                    <Field
+                    <Dropdown
                         type={FIELD_TYPES.SELECT}
                         label="State"
                         name="state"
@@ -129,7 +129,7 @@ export function Form() {
                         placeholder="Select a state"
                         required={true}
                         onChange={handleChangeForm}
-                        options={states}
+                        options={listStates}
                         value={formData.state}
                         className="input"
                     />
@@ -145,8 +145,7 @@ export function Form() {
                         className="input"
                     />
                 </fieldset>
-                <Field
-                    type={FIELD_TYPES.SELECT}
+                <Dropdown
                     label="Department"
                     name="department"
                     id="department"
@@ -157,11 +156,11 @@ export function Form() {
                     value={formData.department}
                     className="input"
                 />
-                <button type="submit" className="btn btn-submit">Save</button>
+                <button type="submit" className="btn btn-submit" alt="Validation du formulaire">Save</button>
             </form>
             <CustomModal
-                isOpen={isModalOpen}
-                onRequestClose={() => setIsModalOpen(false)}
+                isOpen={isCreatedModalOpen}
+                onRequestClose={() => setIsCreatedModalOpen(false)}
                 contentLabel="Employee Created !"
             >
             </CustomModal>

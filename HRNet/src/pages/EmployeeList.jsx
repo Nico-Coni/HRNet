@@ -5,10 +5,11 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { NavLink } from 'react-router-dom';
 import 'primereact/resources/themes/soho-dark/theme.css'
+import { employees } from '../data/data';
 
 export function EmployeeList() {
 
-    const [employeesList] = useLocalStorageState('employees', []);
+    const [employeesList] = useLocalStorageState('employees', employees);
 
     return (
         <div className="employee-list-container">
@@ -32,7 +33,7 @@ export function EmployeeList() {
                 <Column field="department" header="Department" sortable></Column>
             </DataTable>
 
-            <NavLink to="/" className="home-link btn">Home</NavLink>
+            <NavLink to="/" className="home-link btn" alt="Lien vers le formulaire d'ajout d'un nouvel employé">Home</NavLink>
         </div>
     );
 }

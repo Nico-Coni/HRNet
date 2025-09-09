@@ -238,26 +238,11 @@ export const states = [
 ];
 
 export const departments = [
-    {
-        "name": "Sales",
-        "abbreviation": "SL"
-    },
-    {
-        "name": "Marketing",
-        "abbreviation": "MK"
-    },
-    {
-        "name": "Engineering",
-        "abbreviation": "EN"
-    },
-    {
-        "name": "Human Resources",
-        "abbreviation": "HR"
-    },
-    {
-        "name": "Legal",
-        "abbreviation": "LG"
-    }
+    "Sales",
+    "Marketing",
+    "Engineering",
+    "Human Resources",
+    "Legal",
 ];
 
 export const employees = [
