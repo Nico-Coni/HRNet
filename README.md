@@ -63,7 +63,7 @@ react-datepicker : https://www.npmjs.com/package/react-datepicker
 
 react-modal : https://www.npmjs.com/package/react-modal
 
-primereact DataTable : https://primereact.org/datatable/
+primereact DataTable : https://www.npmjs.com/package/primereact/
 
 plugin_dropdown_for_hrnet : https://www.npmjs.com/package/plugin_dropdown_for_hrnet
 

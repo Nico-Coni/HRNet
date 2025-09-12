@@ -256,7 +256,7 @@ export const employees = [
         "state": "CA",
         "zipCode": "12345",
         "department": "Engineering",
-        "abbreviation": "EN"
+        "abbreviation": "CA"
     },
     {
         "firstName": "Jane",
@@ -268,7 +268,7 @@ export const employees = [
         "state": "NY",
         "zipCode": "67890",
         "department": "Marketing",
-        "abbreviation": "MK"
+        "abbreviation": "NY"
     },
     {
         "firstName": "Alice",
@@ -280,7 +280,7 @@ export const employees = [
         "state": "TX",
         "zipCode": "54321",
         "department": "Sales",
-        "abbreviation": "SL"
+        "abbreviation": "TX"
     },
     {
         "firstName": "Bob",
@@ -292,6 +292,6 @@ export const employees = [
         "state": "FL",
         "zipCode": "98765",
         "department": "Human Resources",
-        "abbreviation": "HR"
+        "abbreviation": "FL"
     }
 ]
