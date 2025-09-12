@@ -7,7 +7,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { CustomModal } from '../components/Modal.jsx'
 import { employees } from '../data/data.js'
 import { useLocalStorageState } from '../hooks/hooks.js'
-import { Dropdown } from 'plugin_dropdown_for_hrnet'
+import { Dropdown } from 'plugin_dropdown_react'
 
 export function Form() {
 

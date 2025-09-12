@@ -65,7 +65,7 @@ react-modal : https://www.npmjs.com/package/react-modal
 
 primereact DataTable : https://www.npmjs.com/package/primereact/
 
-plugin_dropdown_for_hrnet : https://www.npmjs.com/package/plugin_dropdown_for_hrnet
+plugin_dropdown_for_hrnet : https://www.npmjs.com/package/plugin_dropdown_react
 
 Pour l'utilisation du plugin Dropdown, voici un exemple d'utilisation dans un formulaire : 
 ```jsx
